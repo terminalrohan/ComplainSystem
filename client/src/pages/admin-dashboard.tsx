@@ -154,7 +154,7 @@ export default function AdminDashboard() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
           <Card className="shadow-material">
             <CardContent className="p-6">
               <div className="flex items-center">
@@ -165,38 +165,6 @@ export default function AdminDashboard() {
                   <p className="text-sm font-medium text-muted-foreground">Active Complaints</p>
                   <p className="text-2xl font-semibold text-foreground" data-testid="text-active-complaints">
                     {complaints.length}
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="shadow-material">
-            <CardContent className="p-6">
-              <div className="flex items-center">
-                <div className="p-3 rounded-lg bg-success/10">
-                  <i className="fas fa-check-circle text-success text-xl"></i>
-                </div>
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-muted-foreground">Resolved Today</p>
-                  <p className="text-2xl font-semibold text-foreground" data-testid="text-resolved-today">
-                    0
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-material">
-            <CardContent className="p-6">
-              <div className="flex items-center">
-                <div className="p-3 rounded-lg bg-warning/10">
-                  <i className="fas fa-clock text-warning text-xl"></i>
-                </div>
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-muted-foreground">Avg. Response Time</p>
-                  <p className="text-2xl font-semibold text-foreground" data-testid="text-avg-response">
-                    N/A
                   </p>
                 </div>
               </div>
