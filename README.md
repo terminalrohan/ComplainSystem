@@ -1,86 +1,129 @@
-# Complaint Management System
+Complaint Management System 🚀
+About the Project
 
-## Overview
+This is a full-stack complaint management system that I built using React, Express, and PostgreSQL.
 
-This is a full-stack complaint management system built with React, Express, and PostgreSQL. The application allows users to submit complaints with images and provides an admin interface for managing and reviewing these complaints. The system features a modern UI built with shadcn/ui components and uses Drizzle ORM for database operations.
+The idea is simple:
 
-## User Preferences
+Users can submit complaints (with images).
 
-Preferred communication style: Simple, everyday language.
+Admins can log in, review, and manage those complaints.
 
-## System Architecture
+I used modern web tools and also got help from AI models while building this project (for structuring the code, debugging, and writing documentation).
 
-### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite for fast development and building
-- **Routing**: Wouter for client-side routing
-- **State Management**: TanStack Query (React Query) for server state management
-- **UI Components**: shadcn/ui component library built on Radix UI primitives
-- **Styling**: Tailwind CSS with custom CSS variables for theming
-- **Form Handling**: React Hook Form with Zod validation
+Tech Stack
+Frontend 🖥️
 
-### Backend Architecture
-- **Framework**: Express.js with TypeScript
-- **Database ORM**: Drizzle ORM for type-safe database operations
-- **Authentication**: Express sessions with bcrypt for password hashing
-- **File Upload**: Multer middleware for handling image uploads
-- **API Design**: RESTful API with proper error handling and logging
+React 18 + TypeScript → Fast, type-safe UI
 
-### Database Design
-- **Database**: PostgreSQL via Neon serverless
-- **Schema Management**: Drizzle Kit for migrations and schema management
-- **Tables**: 
-  - `complaints` table for storing complaint data with image paths
-  - `admins` table for admin authentication
+Vite → Super quick builds
 
-### Authentication & Authorization
-- **Session Management**: Express sessions with PostgreSQL session store
-- **Password Security**: bcrypt for hashing admin passwords
-- **Route Protection**: Middleware-based authentication for admin routes
-- **Client-side Auth**: React Query integration for auth state management
+Wouter → Lightweight routing
 
-### File Storage
-- **Image Upload**: Local file storage using multer
-- **File Validation**: Image type and size restrictions (5MB limit)
-- **Storage Location**: Local uploads directory with automatic creation
+TanStack Query (React Query) → Smooth server state management
 
-### Development Features
-- **Hot Reload**: Vite HMR for frontend development
-- **TypeScript**: Full type safety across frontend and backend
-- **Path Aliases**: Configured for clean imports (@/, @shared/)
-- **Error Handling**: Comprehensive error boundaries and API error handling
-- **Logging**: Request logging with duration tracking for API endpoints
+shadcn/ui + Radix UI + Tailwind CSS → Clean, modern UI with reusable components
 
-## External Dependencies
+React Hook Form + Zod → Easy forms with validation
 
-### Core Technologies
-- **Frontend**: React, Vite, TypeScript
-- **Backend**: Node.js, Express, TypeScript
-- **Database**: PostgreSQL (Neon serverless)
-- **ORM**: Drizzle ORM with Drizzle Kit
+Backend ⚙️
 
-### UI & Styling
-- **Component Library**: Radix UI primitives
-- **Design System**: shadcn/ui components
-- **Styling**: Tailwind CSS with PostCSS
-- **Icons**: Lucide React icons
-- **Fonts**: Google Fonts (Roboto, Font Awesome)
+Express.js + TypeScript → REST API with proper error handling
 
-### State Management & Data Fetching
-- **Server State**: TanStack Query (React Query)
-- **Form Management**: React Hook Form
-- **Validation**: Zod schema validation
+Drizzle ORM → Type-safe queries and schema migrations
 
-### Authentication & Security
-- **Password Hashing**: bcrypt
-- **Session Management**: express-session
-- **Session Store**: connect-pg-simple for PostgreSQL
+bcrypt → Secure password hashing for admins
 
-### File Handling
-- **File Uploads**: multer middleware
-- **File Type Validation**: Built-in multer filtering
+express-session + connect-pg-simple → Session-based authentication
 
-### Development Tools
-- **Build Tool**: Vite with React plugin
-- **Runtime Error Handling**: Replit-specific error overlay
-- **Development Banner**: Replit development environment integration
+Multer → Image uploads with size/type validation
+
+Database 🗄️
+
+PostgreSQL (Neon serverless) → Reliable and scalable
+
+Drizzle Kit → Easy schema management and migrations
+
+Features
+
+✅ Submit complaints with an image (max 5MB)
+✅ Admin login and session-based authentication
+✅ Secure password hashing
+✅ Modern UI (with dark/light theming support)
+✅ Image upload and validation
+✅ Proper error handling and logging
+✅ Fully typed with TypeScript (frontend + backend)
+
+System Flow
+
+User submits complaint → goes into complaints table.
+
+Admin logs in → verified via session + bcrypt.
+
+Admin can view, review, and manage complaints.
+
+Images are stored locally in an uploads folder.
+
+Development Experience
+
+I relied heavily on AI tools (like ChatGPT) for:
+
+Debugging tricky TypeScript/Express issues
+
+Writing clean Drizzle ORM queries
+
+Getting boilerplate for authentication
+
+Drafting parts of this README 😅
+
+But I also made sure I understood and customized everything myself.
+
+This project was a great hands-on learning experience for React Query, Drizzle ORM, and shadcn/ui.
+
+How to Run Locally
+
+Clone the repo
+
+git clone https://github.com/your-username/complaint-management-system.git
+cd complaint-management-system
+
+
+Install dependencies
+
+npm install
+
+
+Setup .env file (example below):
+
+DATABASE_URL=your_neon_postgres_url
+SESSION_SECRET=your_secret
+
+
+Run database migrations
+
+npm run db:push
+
+
+Start backend
+
+npm run dev:server
+
+
+Start frontend
+
+npm run dev:client
+
+Future Improvements
+
+Cloud storage for images (AWS S3, Cloudinary)
+
+Role-based access (multiple admins, super-admin)
+
+Email notifications on complaint updates
+
+Deployment on Vercel + Render
+
+Credits
+
+👨‍💻 Built by Rohan Nawriya
+🤖 With help from AI models for debugging, structuring, and documentation
